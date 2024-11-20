@@ -11,17 +11,23 @@ CI(`Continues Intergration`)과 CD(`Continues Delivery`)라는 용어는 생각�
 복잡해진거 같지만 요는 원시 코드가 프로덕션까지 가는 여정을 고급지게 부르는 말이다.
 
 
-# 🔍 어원?
+# 🔍 어원
 
-1991년 Grady Booch에 의해서 처음 사용되었다고 알려진다. 이후 `Extreme programming`(xp)에서 본격적으로 사용된다고 한다.
+1991년 Grady Booch에 의해서 처음 사용되었다고 알려진다. 이후 `Extreme programming`(XP)에서 본격적으로 사용된다고 한다.
 
 # 🔑 Key Point
 
 XP에서는 `Collective Code Ownership`에서 왜 CI가 필요한지를 설명한다.
 
-<img src="./img/Collective Code Ownership.png">
 
-http://www.extremeprogramming.org/rules/integrateoften.html
+
+<p align="center" style="color:gray">
+    <img style="margin:10px 0px -10px"  src="./img/Collective Code Ownership.png" width=600 />
+    <p align="center">http://www.extremeprogramming.org/rules/integrateoften.html</p>
+    <br>
+</p> 
+
+
 
 이를 설명하자면 xp에서는 개발자는 가능한 주기적으로 코드 저장소에 커밋해야한다고 한다.
 
@@ -53,11 +59,19 @@ xp에서는 개발자가 코드를 병렬적으로 통합하는 일은 대부분
 
 이는 잘못된 패턴은 아니지만 좋든 싫든 이미 아키텍처에 대한 디자인은 팀의 전반적으로 분산되어 있더고 한다.
 
+<br>
+
 그렇다면 누구든 디자인 패턴을 변경해야 한다면 리드/수석 아키텍트에게 검증/권한을 받아야 하는가? 라고 하기에는 복잡한 문제가 된다.
 
-<img src="./img/Fully Automated.png" height=300>
 
-그렇기에 단위테스트를 통해 이를 해결하고자 한다.
+<p align="center" style="color:gray">
+    <img style="margin:10px 0px -10px" src="./img/Fully Automated.png"  width=400 />
+    <p align="center">자동화된 개발프로세스</p>
+    <br>
+</p> 
+
+
+그렇기에 XP에서는 단위테스트를 통해 이를 해결하고자 한다.
 
 자동화된 단위 테스트를 릴리스로 넘어가기 전 100% 통과를 목표로 한다면 `Continues Intergration`를 통해서 개발자는 이러한 문제에 대해서 넘어갈 수 있다고 한다.
 
@@ -66,8 +80,18 @@ xp에서는 개발자가 코드를 병렬적으로 통합하는 일은 대부분
 CI(지속적 통합)이 나오게 된 이유는 집단적 코드 소유에 대한 실현으로 단위 테스트 및 코드 저장소에 합치기 위해 사용한다.
 
 
-# 📜 VCS
+# 📜 개발 방법론
 
-아키텍처에 대해서 신나게 얘기하다가 vcs로 틀어버렸는데
+XP에서 CI를 다루는 가장 중요한 요소는 아키텍처와 Unit Test를 통해 소스 코드를 어떻게 코드 저장소로 병합할 것인지를 가장 중요하게 여기고 있다.
 
-CI에서 가장 중요한 부분은 사실 Unit Test와 소스 코드를 어떻게 코드 저장소로 병합할 것인지가 가장 중요하다고 생각한다.
+이는 aws가 ci/cd에 대한 보고서를 작성하면서 ci/cd를 어떻게 구성해야하는지 등에 작성한 보고서 또한 존재한다.
+
+해당 보고서에서는 GitFlow와 TrunkBased방식의 개발 방법론에 ci/cd에 대해서 작성되어있었다.
+
+1. GitFlow
+
+<img src="./img/GitFlow.png">
+
+2. TrunkBased
+
+<img src="./img/TrunkBased.png">
