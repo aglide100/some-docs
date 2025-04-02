@@ -1,4 +1,4 @@
-# STUNner를 이용하여 K8S에서 webRTC 서빙
+# STUNner를 이용하여 K8S에서 WebRTC 배포
 
 WebRTC란 `Web Real-Time Communications`의 약자로 웹 어플리케이션에서 실시간으로 미디어를 주고 받기 위해 사용되는 프로토콜이다.
 
@@ -156,5 +156,8 @@ MRB를 직접 개발하기에는 상당한 자원이 필요하다.
 
 따라서 오늘은 STUNner를 이용하여 Media Gateway로 동작하는 TURN서버와 다수의 미디어서버가 구동이 가능한지에 대한 실험이다.
 
-# STUNner + K8S
+# Kubernetes Gateway API
+
+
+쿠버네티스에서 네트워크에 대해서는 굉장히 많은 내용이 있지만 
 
